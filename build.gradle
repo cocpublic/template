@@ -1,0 +1,27 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        maven { url "https://android3.weizhipin.com/nexus/repository/public/" }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.4'
+    }
+}
+allprojects {
+    repositories {
+        maven { url uri("$rootDir/.local") }
+        maven { url "https://android3.weizhipin.com/nexus/repository/public/" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+def build_versions = [:]
+build_versions.min_sdk = 21
+build_versions.target_sdk = 29
+build_versions.compile_sdk = 29
+build_versions.build_tools = "29.0.3"
+
+project.ext["build_versions"] = build_versions

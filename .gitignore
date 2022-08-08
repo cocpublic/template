@@ -1,0 +1,9 @@
+.idea/*
+!.idea/vcs.xml
+*.iml
+.gradle
+.local
+.DS_Store
+/build
+local.properties
+

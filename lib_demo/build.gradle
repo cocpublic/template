@@ -1,0 +1,11 @@
+apply from: "$rootDir/gradle/common_library.gradle"
+apply from: "$rootDir/gradle/maven-publish.gradle"
+
+
+android {
+    resourcePrefix 'demo_'
+    namespace 'com.demo.sdk'
+}
+
+dependencies {
+}

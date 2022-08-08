@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Verify" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--<item name="android:background">@android:color/transparent</item>-->
+        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">#ff37c2bc</item>
+        <item name="android:windowBackground">#ffffffff</item>
+    </style>
+</resources>
