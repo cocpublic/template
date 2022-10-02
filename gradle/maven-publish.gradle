@@ -37,12 +37,12 @@ afterEvaluate { project ->
                 artifactId = POM_ARTIFACT_ID
                 version = POM_VERSION
                 println "groupId=" + POM_GROUP_ID + ",artifactId=" + POM_ARTIFACT_ID
+                //from components.java
+                //artifact sourcesJar
+                //artifact javadocJar
                 //如果是war包填写components.web，如果是jar包填写components.java, aar components.release
-
-//                from components.java
                 from isAndroidComponents(project) ? components.release : components.java
-//                artifact sourcesJar
-//                artifact javadocJar
+                artifact isAndroidComponents(project) ? androidSourcesJar: sourcesJar //将源码打包进aar，如果不需要可以去掉
             }
         }
         repositories {
